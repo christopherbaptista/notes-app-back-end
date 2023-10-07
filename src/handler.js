@@ -2,7 +2,7 @@
 const { nanoid } = require('nanoid');
 const notes = require('./notes');
 
-const addNoteHandler = async (request, h) => {
+const addNoteHandler = (request, h) => {
     const { title, tags, body } = request.payload;
 
     const id = nanoid(16);
